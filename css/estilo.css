@@ -11,7 +11,7 @@
     background-color: cornsilk;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
-    text-transform: uppercase;    
+    text-transform: uppercase;
     position: sticky;
     top: 0%;
     z-index: 1;
@@ -61,6 +61,6 @@ h4 {
 .whatsapp {
     width: 70px;
     position: fixed;
-    bottom: 20px ;
+    bottom: 20px;
     right: 20px;
 }

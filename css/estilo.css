@@ -4,7 +4,7 @@
 }
 
 .logo {
-    width: 250px;
+    width: 150px;
 }
 
 .fondoNavbar {
@@ -12,7 +12,11 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
     text-transform: uppercase;    
+    position: sticky;
+    top: 0%;
+    z-index: 1;
 }
+
 
 .fondoFooter {
     background-color: cornsilk;
@@ -52,4 +56,11 @@ h4 {
     font-size: 15px;
     color: saddlebrown;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.whatsapp {
+    width: 70px;
+    position: fixed;
+    bottom: 20px ;
+    right: 20px;
 }

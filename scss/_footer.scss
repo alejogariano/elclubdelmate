@@ -1,8 +1,8 @@
-
 .fondoFooter {
     background-color: $fondoNav;
     font-family: $mainFont;
     text-transform: uppercase;
+
     div {
         padding-top: 4px;
         padding-bottom: 4px;
@@ -10,11 +10,13 @@
         margin-bottom: 4px;
     }
 }
-.navFooter{
+
+.navFooter {
     margin-bottom: 5px;
     padding-bottom: 5px;
     justify-content: center;
 }
+
 .textFooter {
     color: $keyColor;
 }

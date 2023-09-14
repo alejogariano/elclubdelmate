@@ -2,51 +2,23 @@
   width: 150px;
 }
 
-.fondoFooter {
-  background-color: rgb(233, 220, 171);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-transform: uppercase;
+body {
+  background-color: rgb(97, 97, 11);
 }
 
-.fondoBlog {
-  background-color: rgb(233, 220, 171);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-transform: uppercase;
-}
-
-.h2 {
-  font-size: 45px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: darkgreen;
+main h1 {
+  color: black;
+  justify-content: center;
 }
 
 .btnMio {
   background-color: darkolivegreen;
-  color: #fafafa;
+  color: rgb(238, 233, 233);
 }
 
 .btnMio:hover {
   background-color: darkgreen;
-  color: #fafafa;
-}
-
-.h3 {
-  font-size: 25px;
-  color: darkolivegreen;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.h4 {
-  font-size: 15px;
-  color: saddlebrown;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.whatsapp {
-  width: 70px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  color: rgb(238, 233, 233);
 }
 
 .fondoNavbar {
@@ -56,17 +28,149 @@
   text-transform: uppercase;
   position: sticky;
   top: 0%;
-  z-index: 1;
+  z-index: 3;
 }
 
-.heroMio {
-  text-align: center;
-  height: 800px;
+.parrafoSinImagen {
+  background-color: rgb(97, 97, 11);
+  background-size: cover;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.parrafoSinImagen h4 p {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.parrafoSinImagen h4 {
+  font-size: 80px;
+}
+.parrafoSinImagen p {
+  font-size: 20px;
 }
 
-.primerAnuncio {
-  text-align: center;
-  height: 200px;
+.parrafoImagenUno {
+  background-image: url(../img/local.png);
+  background-size: cover;
+  color: black;
+  font-size: 80px;
+  -webkit-text-stroke: 1px rgb(238, 233, 233);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.parrafoImagenUno p {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.botonTienda {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 200px;
+  height: 50px;
+}
+
+.carusel {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.parrafoImagenDos {
+  background-image: url(../img/cebada.jpg);
+  background-size: cover;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+  -webkit-text-stroke: 1px rgb(238, 233, 233);
+  margin-bottom: 30px;
+}
+.parrafoImagenDos h4 h5 p {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.parrafoImagenDos h4 {
+  font-size: 80px;
+}
+.parrafoImagenDos h5 {
+  font-size: 40px;
+}
+.parrafoImagenDos p {
+  font-size: 20px;
+}
+
+@media (min-width: 1000px) {
+  .parrafoImagenUno {
+    height: 800px;
+    padding-top: 200px;
+  }
+  .parrafoImagenDos {
+    height: 800px;
+    padding-top: 200px;
+  }
+}
+@media (max-width: 1000px) and (min-width: 600px) {
+  .parrafoImagenDos {
+    height: 600px;
+    padding-top: 150px;
+  }
+}
+.whatsapp {
+  width: 70px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.ordenTienda {
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.cardMio {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.estiloBlog {
+  justify-content: center;
+}
+
+.fondoBlog {
+  background-color: rgb(233, 220, 171);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  padding-top: 10px;
+  justify-content: center;
+}
+
+.fondoFooter {
+  background-color: rgb(233, 220, 171);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+.fondoFooter div {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.navFooter {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  justify-content: center;
+}
+
+.textFooter {
+  color: rgb(94, 38, 6);
 }
 
 /*# sourceMappingURL=main.css.map */

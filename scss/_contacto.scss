@@ -1,0 +1,69 @@
+
+.bloqueConsultas {
+    justify-content: center;
+    h3 {
+        color: $white;
+        font-size: 40px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+.contenedorRedes {
+    h3 {
+        color: $white;
+        font-size: 40px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+.redesSociales {
+    justify-content: center;
+
+}
+
+.redesCard {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 15px;
+    text-align: center;
+
+    .twiter {
+        padding-top: 18px;
+    }
+    .youtu {
+        padding-top: 15px;
+    }
+}
+
+.mapaVisita {
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    h3 {
+        margin-top: 15px;
+        color: $white;
+        font-size: 40px;
+    }
+
+    h4 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        color: $fondoNav;
+        font-size: 20px;
+    }
+}
+
+@media (max-width:460px) and (min-width:300px) {
+    .contactanos {
+        font-size: 45px;
+    }
+    
+}

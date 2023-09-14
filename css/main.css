@@ -4,11 +4,14 @@
 
 body {
   background-color: rgb(97, 97, 11);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 main h1 {
   color: black;
   justify-content: center;
+  font-size: 60px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .btnMio {
@@ -72,6 +75,11 @@ main h1 {
   margin-bottom: 5px;
   width: 200px;
   height: 50px;
+}
+
+.linkBoton {
+  text-decoration: none;
+  color: rgb(238, 233, 233);
 }
 
 .carusel {
@@ -139,6 +147,81 @@ main h1 {
   margin-right: 40px;
 }
 
+.parrafoSocio h3 {
+  font-size: 40px;
+  color: rgb(238, 233, 233);
+}
+.parrafoSocio h4 {
+  font-size: 20px;
+  color: rgb(233, 220, 171);
+}
+
+.formularioSocio {
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.bloqueConsultas {
+  justify-content: center;
+}
+.bloqueConsultas h3 {
+  color: rgb(238, 233, 233);
+  font-size: 40px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.contenedorRedes h3 {
+  color: rgb(238, 233, 233);
+  font-size: 40px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.redesSociales {
+  justify-content: center;
+}
+
+.redesCard {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 15px;
+  text-align: center;
+}
+.redesCard .twiter {
+  padding-top: 18px;
+}
+.redesCard .youtu {
+  padding-top: 15px;
+}
+
+.mapaVisita {
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.mapaVisita h3 {
+  margin-top: 15px;
+  color: rgb(238, 233, 233);
+  font-size: 40px;
+}
+.mapaVisita h4 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: rgb(233, 220, 171);
+  font-size: 20px;
+}
+
+@media (max-width: 460px) and (min-width: 300px) {
+  .contactanos {
+    font-size: 45px;
+  }
+}
 .estiloBlog {
   justify-content: center;
 }
@@ -149,6 +232,10 @@ main h1 {
   text-transform: uppercase;
   padding-top: 10px;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .fondoFooter {

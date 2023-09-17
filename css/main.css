@@ -41,14 +41,14 @@ body {
   color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.parrafoSinImagen h4 p {
+.parrafoSinImagen h2 p {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
 }
-.parrafoSinImagen h4 {
+.parrafoSinImagen h2 {
   font-size: 80px;
 }
 .parrafoSinImagen p {
@@ -96,17 +96,17 @@ body {
   -webkit-text-stroke: 1px rgb(238, 233, 233);
   margin-bottom: 30px;
 }
-.parrafoImagenDos h4 h5 p {
+.parrafoImagenDos h2 h3 p {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
 }
-.parrafoImagenDos h4 {
+.parrafoImagenDos h2 {
   font-size: 80px;
 }
-.parrafoImagenDos h5 {
+.parrafoImagenDos h3 {
   font-size: 40px;
 }
 .parrafoImagenDos p {

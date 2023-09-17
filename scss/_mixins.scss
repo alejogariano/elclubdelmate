@@ -3,13 +3,10 @@
     font-family: $mainFont;
     color: $color;
     justify-content: $justify;
-    font-size: $size;    
+    font-size: $size;
     margin-bottom: $margin;
-   }
+}
 
 main h1 {
     @include titulos (black, center, 60px, 10px);
 }
-
-//condicionales
-

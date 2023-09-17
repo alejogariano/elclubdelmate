@@ -261,4 +261,17 @@ body {
   color: rgb(94, 38, 6);
 }
 
+.errorCuatro {
+  justify-content: center;
+  text-align: center;
+}
+.errorCuatro img {
+  display: block;
+  margin: 0 auto;
+}
+.errorCuatro button {
+  display: block;
+  margin: 10px auto;
+}
+
 /*# sourceMappingURL=main.css.map */

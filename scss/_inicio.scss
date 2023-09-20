@@ -13,12 +13,12 @@
     }
 
     h2 {
-        font-size: 80px;
+        font-size: 90px;
 
     }
 
     p {
-        font-size: 20px;
+        font-size: 30px;
 
     }
 }
@@ -28,7 +28,7 @@
     background-image: url(../img/local.png);
     background-size: cover;
     color: black;
-    font-size: 80px;
+    font-size: 90px;
     -webkit-text-stroke: 1px $white;
     font-family: $mainFont;
 
@@ -75,23 +75,23 @@
     }
 
     h2 {
-        font-size: 80px;
+        font-size: 90px;
 
     }
 
     h3 {
-        font-size: 40px;
+        font-size: 70px;
 
     }
 
     p {
-        font-size: 20px;
+        font-size: 30px;
 
     }
 }
 
 
-@media (min-width:1000px) {
+@media (min-width:1025px) {
     .parrafoImagenUno {
         height: 800px;
         padding-top: 200px;
@@ -103,10 +103,132 @@
     }
 }
 
-@media (max-width:1000px) and (min-width:600px) {
-    .parrafoImagenDos {
-        height: 600px;
-        padding-top: 150px;
+@media (max-width:1025px) and (min-width:750px) {
+
+    .parrafoSinImagen {
+
+
+        h2 {
+            font-size: 60px;
+
+        }
+
+        p {
+            font-size: 18px;
+
+        }
     }
 
+    .parrafoImagenUno {
+        font-size: 75px;
+
+    }
+
+    .parrafoImagenDos {
+
+
+        h2 {
+            font-size: 75px;
+
+        }
+
+        h3 {
+            font-size: 45px;
+
+        }
+
+        p {
+            font-size:30px;
+
+        }
+
+    }
+
+
+}
+
+@media (max-width:750px) and (min-width:500px) {
+
+    .parrafoSinImagen {
+
+
+        h2 {
+            font-size: 60px;
+
+        }
+
+        p {
+            font-size: 15px;
+
+        }
+    }
+
+    .parrafoImagenUno {
+        font-size: 55px;
+
+    }
+
+    .parrafoImagenDos {
+
+
+        h2 {
+            font-size: 60px;
+
+        }
+
+        h3 {
+            font-size: 40px;
+
+        }
+
+        p {
+            font-size: 20px;
+
+        }
+
+    }
+
+
+}
+
+
+@media (max-width:500px) and (min-width:300px) {
+    .parrafoSinImagen {
+
+
+        h2 {
+            font-size: 30px;
+
+        }
+
+        p {
+            font-size: 10px;
+
+        }
+    }
+
+    .parrafoImagenUno {
+        font-size: 35px;
+
+    }
+
+    .parrafoImagenDos {
+
+
+        h2 {
+            font-size: 40px;
+
+        }
+
+        h3 {
+            font-size: 20px;
+
+        }
+
+        p {
+            font-size: 15px;
+
+        }
+
+    }
 }

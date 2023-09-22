@@ -1,5 +1,11 @@
 .estiloBlog {
     justify-content: center;
+
+    h2 {
+        font-family: $mainFont;
+        font-size: 25px;
+        color: $keyColor;
+    }
 }
 
 .fondoBlog {

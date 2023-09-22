@@ -1,7 +1,14 @@
 .bloqueConsultas {
     justify-content: center;
 
-    h3 {
+    div {
+        margin-bottom: 8px;
+        margin-top: 8px;
+
+    }
+
+
+    h2 {
         color: $white;
         font-size: 40px;
         margin-top: 25px;
@@ -10,7 +17,7 @@
 }
 
 .contenedorRedes {
-    h3 {
+    h2 {
         color: $white;
         font-size: 40px;
         margin-top: 25px;
@@ -24,10 +31,10 @@
 }
 
 .redesCard {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
     padding: 15px;
     text-align: center;
 
@@ -48,13 +55,13 @@
     right: 0;
     margin: auto;
 
-    h3 {
-        margin-top: 15px;
+    h2 {
+        margin-top: 25px;
         color: $white;
         font-size: 40px;
     }
 
-    h4 {
+    h3 {
         margin-top: 15px;
         margin-bottom: 15px;
         color: $fondoNav;
@@ -64,7 +71,44 @@
 
 @media (max-width:460px) and (min-width:300px) {
     .contactanos {
-        font-size: 45px;
+        font-size: 35px;
+    }
+
+    .bloqueConsultas {
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    .contenedorRedes {
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    .mapaVisita {
+        h2 {
+            font-size: 25px;
+        }
+
+        h3 {
+            font-size: 15px;
+        }
     }
 
 }
+
+@keyframes girarRedes {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg);}
+    50% {transform: rotate(30deg);}
+    75% { transform: rotate(45deg);}
+    100% { transform: rotate(0deg); }
+    
+  }
+
+  .redAnimacion {
+    animation-name: girarRedes;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }

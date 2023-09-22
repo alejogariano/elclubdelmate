@@ -201,12 +201,19 @@ body {
   margin-left: 40px;
   margin-right: 40px;
 }
+.cardMio h2 {
+  font-size: 25px;
+  color: rgb(94, 38, 6);
+}
+.cardMio p {
+  font-size: 18px;
+}
 
-.parrafoSocio h3 {
+.parrafoSocio h2 {
   font-size: 40px;
   color: rgb(238, 233, 233);
 }
-.parrafoSocio h4 {
+.parrafoSocio h3 {
   font-size: 20px;
   color: rgb(233, 220, 171);
 }
@@ -219,14 +226,18 @@ body {
 .bloqueConsultas {
   justify-content: center;
 }
-.bloqueConsultas h3 {
+.bloqueConsultas div {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.bloqueConsultas h2 {
   color: rgb(238, 233, 233);
   font-size: 40px;
   margin-top: 25px;
   margin-bottom: 25px;
 }
 
-.contenedorRedes h3 {
+.contenedorRedes h2 {
   color: rgb(238, 233, 233);
   font-size: 40px;
   margin-top: 25px;
@@ -238,10 +249,10 @@ body {
 }
 
 .redesCard {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
   padding: 15px;
   text-align: center;
 }
@@ -260,12 +271,12 @@ body {
   right: 0;
   margin: auto;
 }
-.mapaVisita h3 {
-  margin-top: 15px;
+.mapaVisita h2 {
+  margin-top: 25px;
   color: rgb(238, 233, 233);
   font-size: 40px;
 }
-.mapaVisita h4 {
+.mapaVisita h3 {
   margin-top: 15px;
   margin-bottom: 15px;
   color: rgb(233, 220, 171);
@@ -274,11 +285,51 @@ body {
 
 @media (max-width: 460px) and (min-width: 300px) {
   .contactanos {
-    font-size: 45px;
+    font-size: 35px;
+  }
+  .bloqueConsultas h2 {
+    font-size: 25px;
+  }
+  .contenedorRedes h2 {
+    font-size: 25px;
+  }
+  .mapaVisita h2 {
+    font-size: 25px;
+  }
+  .mapaVisita h3 {
+    font-size: 15px;
   }
 }
+@keyframes girarRedes {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.redAnimacion {
+  animation-name: girarRedes;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
 .estiloBlog {
   justify-content: center;
+}
+.estiloBlog h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  color: rgb(94, 38, 6);
 }
 
 .fondoBlog {

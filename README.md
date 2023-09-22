@@ -1,6 +1,8 @@
 # elclubdelmate
 link del repo: https://github.com/alejogariano/elclubdelmate.git   
-link de pages: https://alejogariano.github.io/elclubdelmate/
+
+link de pages: https://alejogariano.github.io/elclubdelmate/ 
+
 link del servidor (netifly): https://elclubdelmate.netlify.app/
 
 Página de Venta de Mates y Bombillas

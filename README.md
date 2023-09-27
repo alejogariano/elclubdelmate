@@ -1,15 +1,15 @@
-## El Club del Mate
+# El Club del Mate
 link del repo: https://github.com/alejogariano/elclubdelmate.git   
 
 link de pages: https://alejogariano.github.io/elclubdelmate/ 
 
 link del servidor (netifly): https://elclubdelmate.netlify.app/
 
-#Página de Venta de Mates y Bombillas
+##Página de Venta de Mates y Bombillas
 
 Este proyecto es una página web de venta de mates y bombillas, donde los usuarios pueden explorar y comprar una variedad de productos relacionados con el mate.
 
-Características
+##Características
 
 Catálogo de productos: Los usuarios pueden ver una lista de mates y bombillas disponibles para la venta, con imágenes, descripciones y precios.
 
@@ -18,7 +18,7 @@ Búsqueda y filtrado: Los usuarios pueden buscar productos por nombre o categor�
 Registro de usuarios: Los usuarios pueden crear una cuenta para guardar su información y realizar un seguimiento de sus pedidos.
 Proceso de pago: Los usuarios pueden realizar pagos seguros utilizando diferentes métodos de pago, como tarjeta de crédito o PayPal.
 
-Tecnologías utilizadas
+##Tecnologías utilizadas
 
 HTML: para la estructura y contenido de la página.
 

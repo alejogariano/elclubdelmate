@@ -7,7 +7,7 @@ link del servidor (netifly): https://elclubdelmate.netlify.app/
 
 Este proyecto consiste en el desarrollo de un sitio web de venta de mates, el cual consta de 5 páginas principales: Inicio, Tienda, Contacto, Blog y Suscripción. El objetivo principal de este sitio web es brindar a los usuarios una plataforma donde puedan adquirir mates de alta calidad y obtener información relacionada con el mundo del mate.
 
-Páginas Principales
+PAGINAS PRINCIPALES
 1. Inicio
 La página de inicio es la primera página que los usuarios verán al ingresar al sitio web. Esta página tiene como fin, cautivar al espectador por lo que se destacarán los productos más populares y las promociones vigentes.
 

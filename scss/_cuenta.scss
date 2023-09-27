@@ -17,3 +17,24 @@
     margin-bottom: 45px;
 
 }
+
+@media (max-width:460px) and (min-width:300px) {
+
+    main {
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    .parrafoSocio {
+
+        h2 {
+            font-size: 30px;
+        }
+    
+        h3 {
+            font-size: 15px;
+                
+        }
+    }
+}

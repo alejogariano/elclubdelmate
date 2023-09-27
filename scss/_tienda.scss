@@ -12,10 +12,17 @@
 }
 
 .cardMio {
+    background-color: $fondoNav;
+    font-family: $mainFont;
+    text-transform: uppercase;
+    padding-top: 10px;
+    text-align: center;
+    width: 18rem;
     margin-top: 20px;
     margin-bottom: 30px;
     margin-left: 40px;
     margin-right: 40px;
+
     h2 {
         font-size: 25px;
         color: $keyColor;

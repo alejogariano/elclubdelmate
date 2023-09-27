@@ -13,9 +13,17 @@
     font-family: $mainFont;
     text-transform: uppercase;
     padding-top: 10px;
-    justify-content: center;
+    text-align: center;
+    width: 18rem;
+    height: 20rem;
     margin-top: 20px;
     margin-bottom: 30px;
     margin-left: 40px;
     margin-right: 40px;
+}
+
+@media (max-width:460px) and (min-width:300px) {
+ .fondoBlog {
+    margin-left: 60px;
+ }
 }

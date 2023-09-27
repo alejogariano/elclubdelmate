@@ -196,6 +196,12 @@ body {
 }
 
 .cardMio {
+  background-color: rgb(233, 220, 171);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  padding-top: 10px;
+  text-align: center;
+  width: 18rem;
   margin-top: 20px;
   margin-bottom: 30px;
   margin-left: 40px;
@@ -223,6 +229,17 @@ body {
   margin-bottom: 45px;
 }
 
+@media (max-width: 460px) and (min-width: 300px) {
+  main h1 {
+    font-size: 40px;
+  }
+  .parrafoSocio h2 {
+    font-size: 30px;
+  }
+  .parrafoSocio h3 {
+    font-size: 15px;
+  }
+}
 .bloqueConsultas {
   justify-content: center;
 }
@@ -255,6 +272,7 @@ body {
   margin-right: 5px;
   padding: 15px;
   text-align: center;
+  width: 10rem;
 }
 .redesCard .twiter {
   padding-top: 18px;
@@ -337,13 +355,20 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-transform: uppercase;
   padding-top: 10px;
-  justify-content: center;
+  text-align: center;
+  width: 18rem;
+  height: 20rem;
   margin-top: 20px;
   margin-bottom: 30px;
   margin-left: 40px;
   margin-right: 40px;
 }
 
+@media (max-width: 460px) and (min-width: 300px) {
+  .fondoBlog {
+    margin-left: 60px;
+  }
+}
 .fondoFooter {
   background-color: rgb(233, 220, 171);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;

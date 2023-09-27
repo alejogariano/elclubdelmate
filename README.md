@@ -22,6 +22,6 @@ TECNOLOGIAS UTILIZADAS
 
 HTML: para la estructura y contenido de la página.
 
-SCSS: para el diseño y estilo de la página.
+CSS: para el diseño y estilo de la página.
 
 Bootstrap: para la creación de un diseño responsivo y componentes preestablecidos.

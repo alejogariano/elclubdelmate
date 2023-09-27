@@ -5,23 +5,33 @@ link de pages: https://alejogariano.github.io/elclubdelmate/
 
 link del servidor (netifly): https://elclubdelmate.netlify.app/
 
-PÁGINA DE VENTA DE MATES Y BOMBILLAS
+Este proyecto consiste en el desarrollo de un sitio web de venta de mates, el cual consta de 5 páginas principales: Inicio, Tienda, Contacto, Blog y Suscripción. El objetivo principal de este sitio web es brindar a los usuarios una plataforma donde puedan adquirir mates de alta calidad y obtener información relacionada con el mundo del mate.
 
-Este proyecto es una página web de venta de mates y bombillas, donde los usuarios pueden explorar y comprar una variedad de productos relacionados con el mate.
+Páginas Principales
+1. Inicio
+La página de inicio es la primera página que los usuarios verán al ingresar al sitio web. Esta página tiene como fin, cautivar al espectador por lo que se destacarán los productos más populares y las promociones vigentes.
 
-CARACTERÍSTICAS
+2. Tienda
+La página de tienda es donde los usuarios podrán explorar y comprar los diferentes tipos de mates disponibles. Se mostrará una lista de productos con su respectiva imagen, descripción y precio. Los usuarios podrán agregar los productos deseados al carrito de compras y proceder al proceso de pago.
 
-Catálogo de productos: Los usuarios pueden ver una lista de mates y bombillas disponibles para la venta, con imágenes, descripciones y precios.
+3. Contacto
+La página de contacto permitirá a los usuarios comunicarse con la empresa a través de un formulario de contacto. Los usuarios podrán enviar consultas, sugerencias o cualquier otro tipo de mensaje. Además, se proporcionará información de contacto adicional, como redes sociales, dirección y número de teléfono.
 
-Búsqueda y filtrado: Los usuarios pueden buscar productos por nombre o categoría, y también pueden filtrar los productos por precio, material, etc.
+4. Blog
+La página de blog contendrá artículos relacionados con el mundo del mate. Los usuarios podrán leer y comentar los diferentes artículos publicados. Esta sección tiene como objetivo brindar información adicional sobre el mate, sus beneficios y curiosidades.
 
-Registro de usuarios: Los usuarios pueden crear una cuenta para guardar su información y realizar un seguimiento de sus pedidos.
-Proceso de pago: Los usuarios pueden realizar pagos seguros utilizando diferentes métodos de pago, como tarjeta de crédito o PayPal.
+5. Asociacion
+La página de asociacion permitirá a los usuarios registrarse para recibir noticias, promociones y novedades relacionadas con la empresa y sus productos. Los usuarios deberán proporcionar sus datos para suscribirse.
 
-TECNOLOGIAS UTILIZADAS
+HERRAMIENTAS UTILIZADAS
 
-HTML: para la estructura y contenido de la página.
+Este proyecto fue desarrollado utilizando las siguientes herramientas:
 
-CSS: para el diseño y estilo de la página.
+HTML: Se utilizó HTML para estructurar y organizar el contenido de las diferentes páginas del sitio web.
 
-Bootstrap: para la creación de un diseño responsivo y componentes preestablecidos.
+CSS: Se utilizó CSS para dar estilo y diseño a las diferentes secciones y elementos del sitio web.
+
+Bootstrap: Se utilizó el framework Bootstrap para agilizar el desarrollo.
+
+
+

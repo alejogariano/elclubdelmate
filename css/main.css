@@ -56,7 +56,7 @@ body {
 }
 
 .parrafoImagenUno {
-  background-image: url(../img/local.png);
+  background-image: url(../img/local.webp);
   background-size: cover;
   color: black;
   font-size: 90px;
@@ -89,7 +89,7 @@ body {
 }
 
 .parrafoImagenDos {
-  background-image: url(../img/cebada.jpg);
+  background-image: url(../img/cebada.webp);
   background-size: cover;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: black;
@@ -273,6 +273,9 @@ body {
   padding: 15px;
   text-align: center;
   width: 10rem;
+}
+.redesCard .insta {
+  margin-right: 15px;
 }
 .redesCard .twiter {
   padding-top: 18px;

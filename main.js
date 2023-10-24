@@ -33,12 +33,6 @@ if (edad >= 18) {
 
 //CICLOS
 
-for (let i = 1; i <= 10; i = i + 1) {
-  let ingresarNombre = prompt("Nombre del producto que desea comprar");
-  alert(" Producto  N° " + i + " Nombre: " + ingresarNombre);
-  if (ingresarNombre == "") { break }
-}
-
 let numero = 0;
 do {
   numero = prompt("Ingresar Número de Tarjeta");
@@ -70,5 +64,26 @@ switch (metodoPago) {
     break;
 }
 
+//FUNCTION:
+
+function calcularCostoTotal() {
+  const cantidadDeProductos =
+    prompt("Ingrese la cantidad de productos:");
+
+  let costoTotal = 0;
+  
+  for (let i = 1; i <= cantidadDeProductos; i = i + 1) {
+    const precioProducto = prompt(`Ingrese el precio del producto`);
+
+    if (precioProducto != "" && precioProducto > 0) {
+      costoTotal += precioProducto;
+    } else {
+      alert("El precio ingresado es inválido. Inténtelo nuevamente.");
+    }
+  }
+  alert(`El costo total de los productos es: $` + costoTotal);
+}
+
+calcularCostoTotal();
 
 

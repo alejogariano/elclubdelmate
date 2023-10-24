@@ -1,5 +1,3 @@
-//Condicionales
-
 //Cuenta
 
 let cuentaAsociado = prompt("¿Ya tienes una cuenta?");
@@ -22,7 +20,7 @@ if (usuarioIniciadoSesion) {
 
 //Verificar edad del comprador
 
-let edad = prompt("Ingresar edad");
+let edad = parseInt(prompt("Ingresar edad"));
 
 if (edad >= 18) {
   alert("Puede continuar.");
@@ -30,20 +28,32 @@ if (edad >= 18) {
   alert("Por favor, consulta con un mayor de edad para poder continuar.");
 }
 
+//Calcular costo de los productos:
 
-//CICLOS
+function calcularCostoTotal() {
+  const cantidadDeProductos = parseInt(
+    prompt("Ingrese la cantidad de productos:")
+  );
 
-let numero = 0;
-do {
-  numero = prompt("Ingresar Número de Tarjeta");
-  console.log(numero);
-} while (parseInt(numero));
+  let costoTotal = 0;
+  
+  for (let i = 1; i <= cantidadDeProductos; i = i + 1) {
+    const precioProducto = parseFloat(
+      prompt(`Ingrese el precio del producto`)
+    );
 
-let entrada = prompt("Ingresar codigo de seguridad");
-while (entrada != "912") {
-  alert("El usuario ingresó " + entrada);
-  entrada = prompt("Codigo incorrecto, intente de nuevo.");
+    if (precioProducto != "" && precioProducto > 0) {
+      costoTotal += precioProducto;
+    } else {
+      alert("El precio ingresado es inválido. Inténtelo nuevamente.");
+    }
+  }
+  alert(`El costo total de los productos es: $` + costoTotal);
 }
+
+calcularCostoTotal();
+
+//Metodo de pago
 
 let metodoPago = prompt("Puede abonar con efectivo, mercado pago, tarjeta de debito o tarjeta de credito.")
 switch (metodoPago) {
@@ -64,26 +74,15 @@ switch (metodoPago) {
     break;
 }
 
-//FUNCTION:
+let numero = 0;
+do {
+  numero = parseFloat(prompt("Ingresar Número de Tarjeta"));
+  console.log(numero);
+} while (numero <= 0);
 
-function calcularCostoTotal() {
-  const cantidadDeProductos =
-    prompt("Ingrese la cantidad de productos:");
-
-  let costoTotal = 0;
-  
-  for (let i = 1; i <= cantidadDeProductos; i = i + 1) {
-    const precioProducto = prompt(`Ingrese el precio del producto`);
-
-    if (precioProducto != "" && precioProducto > 0) {
-      costoTotal += precioProducto;
-    } else {
-      alert("El precio ingresado es inválido. Inténtelo nuevamente.");
-    }
-  }
-  alert(`El costo total de los productos es: $` + costoTotal);
+let entrada = parseFloat(prompt("Ingresar codigo de seguridad"));
+while (entrada != "912") {
+  alert("El usuario ingresó " + entrada);
+  entrada = parseFloat(prompt("Codigo incorrecto, intente de nuevo."));
 }
-
-calcularCostoTotal();
-
 

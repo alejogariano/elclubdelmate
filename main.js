@@ -96,15 +96,26 @@ const mateCalabazaCocodrilo = {
   ],
 };
 
-console.log (mateImperial)
-console.log (mateCamionero.nombre)
-console.log (mateCamioneroMadera.descripcion)
-console.log (mateImperial.detalles)
-console.log (mateImperialMarronAcero.capacidad)
+console.log(mateImperial)
+console.log(mateCamionero.nombre)
+console.log(mateCamioneroMadera.descripcion)
+console.log(mateImperial.detalles)
+console.log(mateImperialMarronAcero.capacidad)
 
-let mates = [mateImperial, mateCamionero, mateCamioneroMadera, mateImperialMarronAcero, mateAlgarrobo, mateCalabazaCocodrilo];
+const mates = [mateImperial, mateCamionero, mateCamioneroMadera, mateImperialMarronAcero, mateAlgarrobo];
 
-console.log (mates [3])
+mates.push (mateCalabazaCocodrilo)
+
+console.log(mates)
+
+
+console.log(mates [3])
+
+
+for (let mate of mates) {
+  console.log (mate)
+}
+
 
   //Cuenta
 

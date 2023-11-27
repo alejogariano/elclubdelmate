@@ -2,6 +2,7 @@
 
 const mateImperial = {
   nombre: "Mate Imperial de Acero Inoxidable",
+  precio: "$16.890",
   descripcion:
     "El Mate Imperial de Acero Inoxidable es una obra maestra de diseño y funcionalidad. Fabricado con los más altos estándares de calidad, este mate combina la elegancia del acero inoxidable con la tradición del mate argentino.",
   material: "Acero Inoxidable Premium",
@@ -18,6 +19,7 @@ const mateImperial = {
 
 const mateCamionero = {
   nombre: "Mate Camionero de Acero Inoxidable",
+  precio: "$11.900",
   descripcion:
     "El Mate Camionero de Acero Inoxidable es una opción resistente y funcional diseñada para acompañarte en tus viajes. Fabricado con acero inoxidable de alta calidad, este mate ha sido creado pensando en la comodidad y durabilidad para los amantes del mate que están siempre en movimiento.",
   material: "Acero Inoxidable de Calidad",
@@ -34,6 +36,7 @@ const mateCamionero = {
 
 const mateCamioneroMadera = {
   nombre: "Mate Camionero de Madera",
+  precio: "$10.980",
   descripcion:
     "El Mate Camionero de Madera es una fusión perfecta entre tradición y estilo moderno. Fabricado con madera de alta calidad, este mate está diseñado para los amantes del mate que aprecian la calidez y la estética única de la madera natural.",
   material: "Madera de Roble",
@@ -50,6 +53,7 @@ const mateCamioneroMadera = {
 
 const mateImperialMarronAcero = {
   nombre: "Mate Imperial de Color Marrón de Acero",
+  precio: "$18.900",
   descripcion:
     "El Mate Imperial de Color Marrón de Acero fusiona la robustez del acero con la calidez del color marrón, creando una pieza única que combina durabilidad con estilo. Este mate es una elección elegante para aquellos que buscan un equilibrio entre resistencia y estética.",
   material: "Acero Inoxidable con Acabado en Color Marrón",
@@ -66,6 +70,7 @@ const mateImperialMarronAcero = {
 
 const mateAlgarrobo = {
   nombre: "Mate de Algarrobo",
+  precio: "$11.890",
   descripcion:
     "El Mate de Algarrobo es una obra maestra artesanal que destaca por la belleza natural de la madera de algarrobo. Este mate refleja la tradición y la artesanía, ofreciendo una experiencia auténtica para los amantes del mate que aprecian la calidez y la singularidad de los materiales naturales.",
   material: "Madera de Algarrobo",
@@ -82,6 +87,7 @@ const mateAlgarrobo = {
 
 const mateCalabazaCocodrilo = {
   nombre: "Mate de Calabaza Intervenido con Diseño de Cocodrilo",
+  precio: "$ 4.990",
   descripcion:
     "Sumérgete en la exquisita combinación de la tradición del mate de calabaza y el arte único de un diseño intervenido con motivo de cocodrilo. Este mate es mucho más que un recipiente; es una obra de arte funcional que aporta un toque distintivo a tu experiencia mateada.",
   material: "Calabaza Natural Intervenida",
@@ -116,6 +122,32 @@ for (let mate of mates) {
   console.log (mate)
 }
 
+// DOM, uso de html en la pagina Tienda
+
+function calcularCostoTotal() {
+  const cantidadDeProductos = parseInt(document.getElementById("cantidad-productos").value);
+
+  let costoTotal = 0;
+
+  for (let i = 1; i <= cantidadDeProductos; i= i + 1) {
+    const precioProducto = parseFloat(prompt(`Ingrese el precio del producto ${i}`));
+
+    if (precioProducto !== "" && precioProducto > 0) {
+      costoTotal += precioProducto;
+    } else {
+      mensajeUsuario.innerText = "El precio ingresado es inválido. Inténtelo nuevamente.";
+      return;
+    }
+  }
+
+  const costoTotalElement = document.getElementById("costo-total");
+  costoTotalElement.innerText = `El costo total de los productos es: $${costoTotal}`;
+}
+
+//Eventos
+
+
+
 
   //Cuenta
 
@@ -146,31 +178,6 @@ if (edad >= 18) {
 } else {
   alert("Por favor, consulta con un mayor de edad para poder continuar.");
 }
-
-//Calcular costo de los productos:
-
-function calcularCostoTotal() {
-  const cantidadDeProductos = parseInt(
-    prompt("Ingrese la cantidad de productos:")
-  );
-
-  let costoTotal = 0;
-
-  for (let i = 1; i <= cantidadDeProductos; i = i + 1) {
-    const precioProducto = parseFloat(
-      prompt(`Ingrese el precio del producto`)
-    );
-
-    if (precioProducto != "" && precioProducto > 0) {
-      costoTotal += precioProducto;
-    } else {
-      alert("El precio ingresado es inválido. Inténtelo nuevamente.");
-    }
-  }
-  alert(`El costo total de los productos es: $` + costoTotal);
-}
-
-calcularCostoTotal();
 
 //Metodo de pago
 

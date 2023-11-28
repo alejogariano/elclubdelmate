@@ -1,3 +1,7 @@
+//Storage y JSON
+
+
+
 //Objetos Arrays
 
 const mateImperial = {
@@ -110,26 +114,26 @@ console.log(mateImperialMarronAcero.capacidad)
 
 const mates = [mateImperial, mateCamionero, mateCamioneroMadera, mateImperialMarronAcero, mateAlgarrobo];
 
-mates.push (mateCalabazaCocodrilo)
+mates.push(mateCalabazaCocodrilo)
 
 console.log(mates)
 
 
-console.log(mates [3])
+console.log(mates[3])
 
 
 for (let mate of mates) {
-  console.log (mate)
+  console.log(mate)
 }
 
-// DOM, uso de html en la pagina Tienda
+// DOM, uso de html en la pagina Tienda.html
 
 function calcularCostoTotal() {
   const cantidadDeProductos = parseInt(document.getElementById("cantidad-productos").value);
 
   let costoTotal = 0;
 
-  for (let i = 1; i <= cantidadDeProductos; i= i + 1) {
+  for (let i = 1; i <= cantidadDeProductos; i = i + 1) {
     const precioProducto = parseFloat(prompt(`Ingrese el precio del producto ${i}`));
 
     if (precioProducto !== "" && precioProducto > 0) {
@@ -144,14 +148,33 @@ function calcularCostoTotal() {
   costoTotalElement.innerText = `El costo total de los productos es: $${costoTotal}`;
 }
 
-//Eventos
+//Eventos, uso de HTML en la pagina Cuenta.html
+
+let asociarse = document.getElementById("asociacion");
+
+asociarse.addEventListener("submit", validarAsociacion);
+
+function validarAsociacion(e) {
+  e.preventDefault();
+  console.log("Asociacion exitosa");
+}
+
+
+let botonAsociarse = document.getElementById('botonAsociarse');
+
+botonAsociarse.addEventListener('click', function () {
+  
+  alert('¡Bienvenido al Club!');
+});
 
 
 
 
-  //Cuenta
 
-  let cuentaAsociado = prompt("¿Ya tienes una cuenta?");
+
+//Cuenta
+
+let cuentaAsociado = prompt("¿Ya tienes una cuenta?");
 
 if ((cuentaAsociado != "") && ((cuentaAsociado == "NO") || (cuentaAsociado == "no"))) {
   alert("Registrate.");

@@ -1,6 +1,3 @@
-//Storage y JSON
-
-
 
 //Objetos Arrays
 
@@ -126,6 +123,27 @@ for (let mate of mates) {
   console.log(mate)
 }
 
+//Storage y JSON
+
+
+const matesJSON = JSON.stringify(mates);
+
+localStorage.setItem("Mates", matesJSON);
+
+const datosAlmacenados = localStorage.getItem("Mates");
+
+const matesAlmacenados = JSON.parse(datosAlmacenados);
+
+console.log(matesAlmacenados);
+
+for (const mate of matesAlmacenados) {
+
+  console.log(`Nombre: ${mate.nombre}`);
+
+  console.log(`Precio: ${mate.precio}`);
+}
+
+
 // DOM, uso de html en la pagina Tienda.html
 
 function calcularCostoTotal() {
@@ -148,24 +166,6 @@ function calcularCostoTotal() {
   costoTotalElement.innerText = `El costo total de los productos es: $${costoTotal}`;
 }
 
-//Eventos, uso de HTML en la pagina Cuenta.html
-
-let asociarse = document.getElementById("asociacion");
-
-asociarse.addEventListener("submit", validarAsociacion);
-
-function validarAsociacion(e) {
-  e.preventDefault();
-  console.log("Asociacion exitosa");
-}
-
-
-let botonAsociarse = document.getElementById('botonAsociarse');
-
-botonAsociarse.addEventListener('click', function () {
-  
-  alert('¡Bienvenido al Club!');
-});
 
 
 
@@ -174,7 +174,7 @@ botonAsociarse.addEventListener('click', function () {
 
 //Cuenta
 
-let cuentaAsociado = prompt("¿Ya tienes una cuenta?");
+/*let cuentaAsociado = prompt("¿Ya tienes una cuenta?");
 
 if ((cuentaAsociado != "") && ((cuentaAsociado == "NO") || (cuentaAsociado == "no"))) {
   alert("Registrate.");
@@ -233,5 +233,5 @@ let entrada = parseFloat(prompt("Ingresar codigo de seguridad"));
 while (entrada != "912") {
   alert("El usuario ingresó " + entrada);
   entrada = parseFloat(prompt("Codigo incorrecto, intente de nuevo."));
-}
+}*/
 

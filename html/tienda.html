@@ -11,7 +11,8 @@
     <!--css-->
     <link rel="stylesheet" href="../css/main.css">
     <!--javascript-->
-    <script src="../main.js" defer></script>
+    <script src="../javascript/tienda.js" defer></script>
+    
     <!--icono web-->
     <link rel="shortcut icon" href="../img/LOGO.webp" type="image/x-icon">
     <!--metas para seo-->
@@ -67,77 +68,19 @@
     <main class="container-fluid">
         <h1 class="text-center">TIENDA</h1>
 
-        <!-- DOM -->
+        
+        <!--cards compra-->
+
+        <div id="productos-container">            </div>
 
         <form id="formulario-compra">
             <label for="cantidad-productos">Cantidad de productos:</label>
             <input type="number" id="cantidad-productos" />
             <button type="button" onclick="calcularCostoTotal()">Calcular Costo Total</button>
-        </form>
-
-    
-        <div id="costo-total"></div>
-
-
-
-
-        <!--cards compra-->
-
-        <div class="row ordenTienda">
-            <div class="card col-xl-3 col-md-6 col-sm-12 text-center cardMio">
-                <img src="../img/mate-1.webp" class="card-img-top" alt="Foto Mate imperial de Acero inox">
-                <div class="card-body">
-                    <h2 class="card-title">MATE IMPERIAL DE ACERO INOX</h2>
-                    <p class="card-text"> $16.890 </p>
-                    <a href="#" class="btn btnMio">COMPRAR</a>
-                </div>
-            </div>
-
-            <div class="card col-xl-3 col-md-6 col-sm-12 text-center cardMio">
-                <img src="../img/mate-2.webp" class="card-img-top" alt="foto mate camionero acero inox">
-                <div class="card-body">
-                    <h2 class="card-title">MATE CAMIONERO DE ACERO INOX</h2>
-                    <p class="card-text"> $11.900 </p>
-                    <a href="#" class="btn btnMio">COMPRAR</a>
-                </div>
-            </div>
-
-            <div class="card col-xl-3 col-md-6 col-sm-12 text-center cardMio">
-                <img src="../img/mate camionero.webp" class="card-img-top" alt="foto mate camionero">
-                <div class="card-body">
-                    <h2 class="card-title">MATE CAMIONERO</h2>
-                    <p class="card-text"> $10.980</p>
-                    <a href="#" class="btn btnMio">COMPRAR</a>
-                </div>
-            </div>
-
-            <div class="card col-xl-3 col-md-6 col-sm-12 text-center cardMio">
-                <img src="../img/mate-4.webp" class="card-img-top" alt="foto mate imperial marron">
-                <div class="card-body">
-                    <h2 class="card-title">MATE IMPERIAL COLOR MARRÓN</h2>
-                    <p class="card-text"> $ 18.900 </p>
-                    <a href="#" class="btn btnMio">COMPRAR</a>
-                </div>
-            </div>
-
-            <div class="card col-xl-3 col-md-6 col-sm-12 text-center cardMio">
-                <img src="../img/mate-5.webp" class="card-img-top" alt="foto mate de algarrobo">
-                <div class="card-body">
-                    <h2 class="card-title">MATE DE ALGARROBO</h2>
-                    <p class="card-text"> $11.890 </p>
-                    <a href="#" class="btn btnMio">COMPRAR</a>
-                </div>
-            </div>
-
-            <div class="card col-xl-3 col-md-6 col-sm-12 text-center cardMio">
-                <img src="../img/mate intervenido cocodrilo.webp" class="card-img-top" alt="foto mate cocodrilo">
-                <div class="card-body">
-                    <h2 class="card-title">MATE INTERVENIDO COCODRILO</h2>
-                    <p class="card-text"> $ 4.990 </p>
-                    <a href="#" class="btn btnMio">COMPRAR</a>
-                </div>
-            </div>
-        </div>
+          </form>
+          <div id="mensaje-usuario"></div>
+          <div id="costo-total"></div>
+          
     </main>
 
     <!--footer-->

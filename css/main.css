@@ -195,24 +195,31 @@ body {
   margin-top: 2px;
 }
 
-.cardMio {
-  background-color: rgb(233, 220, 171);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-transform: uppercase;
-  padding-top: 10px;
-  text-align: center;
-  width: 18rem;
+#productos-container {
   margin-top: 20px;
-  margin-bottom: 30px;
-  margin-left: 40px;
-  margin-right: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.cardMio h2 {
-  font-size: 25px;
-  color: rgb(94, 38, 6);
+
+.producto {
+  width: 300px;
+  text-align: center;
+  background-color: rgb(233, 220, 171);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 3px solid rgb(94, 38, 6);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
-.cardMio p {
-  font-size: 18px;
+.producto img {
+  max-width: 100%;
+  height: auto;
+}
+
+.producto:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .parrafoSocio h2 {

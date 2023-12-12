@@ -3,7 +3,7 @@
   "mateImperial":{
      "nombre":"Mate Imperial de Acero Inoxidable",
      "imagen": "../img/mate-1.webp",
-     "precio":"$16.890",
+     "precio":"$16890",
      "descripcion":"El Mate Imperial de Acero Inoxidable es una obra maestra de diseño y funcionalidad. Fabricado con los más altos estándares de calidad, este mate combina la elegancia del acero inoxidable con la tradición del mate argentino.",
      "material":"Acero Inoxidable Premium",
      "capacidad":"300 ml",
@@ -18,7 +18,7 @@
   "mateCamionero":{
      "nombre":"Mate Camionero de Acero Inoxidable",
      "imagen": "../img/mate-2.webp",
-     "precio":"$11.900",
+     "precio":"$11900",
      "descripcion":"El Mate Camionero de Acero Inoxidable es una opción resistente y funcional diseñada para acompañarte en tus viajes. Fabricado con acero inoxidable de alta calidad, este mate ha sido creado pensando en la comodidad y durabilidad para los amantes del mate que están siempre en movimiento.",
      "material":"Acero Inoxidable de Calidad",
      "capacidad":"500 ml",
@@ -33,7 +33,7 @@
   "mateCamioneroMadera":{
      "nombre":"Mate Camionero de Madera",
      "imagen": "../img/mate-3.webp",
-     "precio":"$10.980",
+     "precio":"$10980",
      "descripcion":"El Mate Camionero de Madera es una fusión perfecta entre tradición y estilo moderno. Fabricado con madera de alta calidad, este mate está diseñado para los amantes del mate que aprecian la calidez y la estética única de la madera natural.",
      "material":"Madera de Roble",
      "capacidad":"450 ml",
@@ -48,7 +48,7 @@
   "mateImperialMarronAcero":{
      "nombre":"Mate Imperial de Color Marrón de Acero",
      "imagen": "../img/mate-4.webp",
-     "precio":"$18.900",
+     "precio":"$18900",
      "descripcion":"El Mate Imperial de Color Marrón de Acero fusiona la robustez del acero con la calidez del color marrón, creando una pieza única que combina durabilidad con estilo. Este mate es una elección elegante para aquellos que buscan un equilibrio entre resistencia y estética.",
      "material":"Acero Inoxidable con Acabado en Color Marrón",
      "capacidad":"350 ml",
@@ -63,7 +63,7 @@
   "mateAlgarrobo":{
      "nombre":"Mate de Algarrobo",
      "imagen": "../img/mate-5.webp",
-     "precio":"$11.890",
+     "precio":"$11890",
      "descripcion":"El Mate de Algarrobo es una obra maestra artesanal que destaca por la belleza natural de la madera de algarrobo. Este mate refleja la tradición y la artesanía, ofreciendo una experiencia auténtica para los amantes del mate que aprecian la calidez y la singularidad de los materiales naturales.",
      "material":"Madera de Algarrobo",
      "capacidad":"300 ml",
@@ -78,7 +78,7 @@
   "mateCalabazaCocodrilo":{
      "nombre":"Mate de Calabaza Intervenido con Diseño de Cocodrilo",
      "imagen": "../img/mate-6.webp",
-     "precio":"$ 4.990",
+     "precio":"$4990",
      "descripcion":"Sumérgete en la exquisita combinación de la tradición del mate de calabaza y el arte único de un diseño intervenido con motivo de cocodrilo. Este mate es mucho más que un recipiente; es una obra de arte funcional que aporta un toque distintivo a tu experiencia mateada.",
      "material":"Calabaza Natural Intervenida",
      "capacidad":"250 ml",

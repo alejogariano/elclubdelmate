@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <!--javascript-->
     <script src="../javascript/tienda.js" defer></script>
-    
+
     <!--icono web-->
     <link rel="shortcut icon" href="../img/LOGO.webp" type="image/x-icon">
     <!--metas para seo-->
@@ -68,19 +68,20 @@
     <main class="container-fluid">
         <h1 class="text-center">TIENDA</h1>
 
-        
+
         <!--cards compra-->
 
-        <div id="productos-container">            </div>
+        <div id="productos-container"></div>
 
-        <form id="formulario-compra">
-            <label for="cantidad-productos">Cantidad de productos:</label>
-            <input type="number" id="cantidad-productos" />
-            <button type="button" onclick="calcularCostoTotal()">Calcular Costo Total</button>
-          </form>
-          <div id="mensaje-usuario"></div>
-          <div id="costo-total"></div>
-          
+        <div id="carrito-container"></div>
+
+        <div id="mensaje-usuario"></div>
+        <div id="costo-total"></div>
+
+        <button type="button" id="calcular-costo-total">Calcular Costo Total</button>
+
+
+
     </main>
 
     <!--footer-->

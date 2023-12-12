@@ -1,74 +1,92 @@
+// Carrito: array para almacenar los productos seleccionados
+const carrito = [];
+
 document.addEventListener('DOMContentLoaded', function () {
     // Cargar datos desde el archivo JSON
     fetch('../catalogo.json')
-      .then(response => response.json())
-      .then(data => mostrarProductos(Object.values(data)))
-      .catch(error => console.error('Error al cargar datos:', error));
-  
-    // Función para mostrar productos en el DOM
-    function mostrarProductos(productos) {
-      const productosContainer = document.getElementById('productos-container');
-  
-      // Iterar sobre los productos y mostrarlos en el contenedor
-      productos.forEach(producto => {
-        // Crear elemento contenedor para cada producto
-        const productoElement = document.createElement('div');
-        productoElement.classList.add('producto');
-  
-        // Crear elemento imagen y asignar la URL de la imagen desde el producto
-        const imagenElement = document.createElement('img');
-        imagenElement.src = producto.imagen; // Asegúrate de tener la propiedad "imagen" en tus datos JSON
-        imagenElement.alt = producto.nombre; // Agrega un texto alternativo para accesibilidad
-        productoElement.appendChild(imagenElement);
-  
+        .then(response => response.json())
+        .then(data => mostrarProductos(Object.values(data)))
+        .catch(error => console.error('Error al cargar datos:', error));
+
+    // Asignar evento al botón "Calcular Costo Total"
+    const calcularCostoTotalBtn = document.getElementById('calcular-costo-total');
+    if (calcularCostoTotalBtn) {
+        calcularCostoTotalBtn.addEventListener('click', calcularCostoTotal);
+    }
+});
+
+// Función para mostrar productos en el DOM
+function mostrarProductos(productos) {
+    const productosContainer = document.getElementById('productos-container');
+
+    // Iterar sobre los productos y mostrarlos en el contenedor
+    productos.forEach(producto => {
         // Crear elementos para mostrar detalles del producto
         const detallesElement = document.createElement('div');
         detallesElement.classList.add('detalles');
         detallesElement.innerHTML = `
-          <h2>${producto.nombre}</h2>
-          <p>Precio: ${producto.precio}</p>
-          <p>${producto.descripcion}</p>
+            <h2>${producto.nombre}</h2>
+            <p>Precio: ${producto.precio}</p>
+            <p>${producto.descripcion}</p>
         `;
-        productoElement.appendChild(detallesElement);
-  
+
         // Crear botón "Agregar al carrito"
         const botonAgregar = document.createElement('button');
         botonAgregar.textContent = 'Agregar al carrito';
         botonAgregar.addEventListener('click', () => {
-          // Puedes implementar aquí la lógica para agregar el producto al carrito
-          console.log(`Producto "${producto.nombre}" agregado al carrito`);
+            // Agregar el producto al carrito
+            carrito.push(producto);
+            console.log(`Producto "${producto.nombre}" agregado al carrito`);
         });
         detallesElement.appendChild(botonAgregar);
-  
-        // Agregar el producto al contenedor principal
-        productosContainer.appendChild(productoElement);
-      });
-    }
-  });
 
-  function calcularCostoTotal() {
-    const cantidadDeProductos = parseInt(document.getElementById("cantidad-productos").value);
-  
-    let costoTotal = 0;
+        // Agregar detalles al contenedor de productos
+        productosContainer.appendChild(detallesElement);
+    });
+}
+
+// Función para mostrar el contenido del carrito
+function mostrarCarrito() {
+    const carritoContainer = document.getElementById('carrito-container');
+    carritoContainer.innerHTML = '';
+
+    carrito.forEach(producto => {
+        const carritoElement = document.createElement('div');
+        carritoElement.classList.add('producto-en-carrito');
+        carritoElement.innerHTML = `
+            <p>${producto.nombre} - Precio: ${producto.precio}</p>
+        `;
+        carritoContainer.appendChild(carritoElement);
+    });
+}
+
+// Función para calcular el costo total y mostrar el carrito
+function calcularCostoTotal() {
     const mensajeUsuario = document.getElementById("mensaje-usuario");
-  
-    // Limpiar mensajes anteriores
-    mensajeUsuario.innerText = "";
-  
-    for (let i = 1; i <= cantidadDeProductos; i= i + 1) {
-      const precioProducto = parseFloat(prompt(`Ingrese el precio del producto ${i}`));
-  
-      if (!isNaN(precioProducto) && precioProducto > 0) {
-        costoTotal += precioProducto;
-      } else {
-        mensajeUsuario.innerText = "El precio ingresado es inválido. Inténtelo nuevamente.";
-        return;
-      }
-    }
-  
     const costoTotalElement = document.getElementById("costo-total");
-    costoTotalElement.innerText = `El costo total de los productos es: $${costoTotal.toFixed(2)}`;
-  }
-  
-  
-  
+
+    if (!mensajeUsuario || !costoTotalElement) {
+        console.error('Elemento con ID "mensaje-usuario" o "costo-total" no encontrado en el DOM.');
+        return;
+    }
+
+    let costoTotal = 0;
+
+    carrito.forEach(producto => {
+        // Eliminar caracteres no deseados y convertir a número
+        const precioNumerico = parseFloat(producto.precio.replace(/[^0-9.]/g, ''));
+
+        if (!isNaN(precioNumerico)) {
+            costoTotal += precioNumerico;
+        } else {
+            console.error(`El precio de "${producto.nombre}" no es un número válido. Tipo: ${typeof producto.precio}, Valor: ${producto.precio}`);
+        }
+    });
+
+    // Formatear el costo total como cadena sin decimales
+    const costoTotalFormateado = costoTotal.toFixed(0);
+
+    costoTotalElement.innerText = `El costo total de los productos en el carrito es: $${costoTotalFormateado}`;
+    mostrarCarrito();
+}
+

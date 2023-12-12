@@ -184,65 +184,50 @@ body {
     font-size: 15px;
   }
 }
-.ordenTienda {
-  justify-content: center;
-  margin-top: 2px;
-}
-
-/* Estilos de los productos */
 #productos-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.producto {
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 15px;
-  width: 200px;
-}
-
+/* Estilo para los productos */
 .detalles {
+  color: rgb(94, 38, 6);
+  border: 3px solid rgb(94, 38, 6);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(233, 220, 171);
+  width: 300px;
   text-align: center;
 }
+.detalles .precio {
+  color: #ddd;
+}
 
-.button-agregar {
-  background-color: #4caf50;
+/* Estilo para la imagen del producto */
+.producto-imagen {
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para el botón "Agregar al carrito" */
+button {
+  background-color: darkolivegreen;
   color: white;
-  padding: 8px 12px;
+  padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-/* Estilos del carrito */
+button:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+/* Estilo para el carrito */
 #carrito-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-.producto-en-carrito {
-  margin-bottom: 10px;
-}
-
-/* Estilos del mensaje de usuario */
-#mensaje-usuario {
-  margin-top: 20px;
-  font-size: 16px;
-  color: red;
-}
-
-/* Estilos del costo total */
-#costo-total {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: black;
 }
 
 /* Estilos del botón "Calcular Costo Total" */

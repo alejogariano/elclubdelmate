@@ -67,21 +67,28 @@
     <!--cuerpo de pagina-->
 
 
-    <main class="container-fluid">
+    <main class="container">
+
         <h1 class="text-center">TIENDA</h1>
 
 
         <!--cards compra-->
 
-        <div id="productos-container" class="container-fluid"></div>
-        <div id="mensaje-usuario"></div>
-        <div id="costo-total"></div>
-        <div id="carrito-container"></div>
-        <button type="button" id="calcular-costo-total">Calcular Costo Total</button>
+        <!-- Contenedor principal para los productos -->
+        <div class="row" id="productos-container"></div>
 
+        <button id="mostrar-carrito">Mostrar Carrito</button>
 
+        <!-- Otros elementos -->
+        <div class="listaCarrito" id="lista-carrito">
+            <div id="carrito-container" class="carrito-container"></div>
+            <button type="button" id="calcular-costo-total"  class="btn btn-primary">Calcular Costo Total</button>
+            <div id="costo-total" class="costo-total"></div>
+            <div id="mensaje-usuario" class="mensaje-usuario"></div>
+        </div>
 
     </main>
+
 
     <!--footer-->
 

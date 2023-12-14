@@ -1,27 +1,39 @@
-// Carrito
+// Carrito: array para almacenar los productos seleccionados
 const carrito = [];
 
 document.addEventListener('DOMContentLoaded', function () {
-    
+    // Cargar datos desde el archivo JSON
     fetch('../catalogo.json')
         .then(response => response.json())
         .then(data => mostrarProductos(Object.values(data)))
         .catch(error => console.error('Error al cargar datos:', error));
 
-    
+    // Asignar evento al botón "Calcular Costo Total"
     const calcularCostoTotalBtn = document.getElementById('calcular-costo-total');
     if (calcularCostoTotalBtn) {
         calcularCostoTotalBtn.addEventListener('click', calcularCostoTotal);
     }
+
+    // Agregar evento al botón que mostrará/ocultará la lista de carrito
+    const mostrarCarritoBtn = document.getElementById('mostrar-carrito');
+    const listaCarrito = document.getElementById('lista-carrito');
+
+    mostrarCarritoBtn.addEventListener('click', function () {
+        // Alternar la visibilidad de la lista de carrito
+        listaCarrito.style.display = (listaCarrito.style.display === 'none' || listaCarrito.style.display === '') ? 'block' : 'none';
+
+        // Agregar un console.log para verificar si se está llamando correctamente
+        console.log('Botón clickeado, visibilidad:', listaCarrito.style.display);
+    });
 });
 
 // Función para mostrar productos en el DOM
 function mostrarProductos(productos) {
     const productosContainer = document.getElementById('productos-container');
 
-    // Productos
+    // Iterar sobre los productos y mostrarlos en el contenedor
     productos.forEach(producto => {
-        
+        // Crear elementos para mostrar detalles del producto
         const detallesElement = document.createElement('div');
         detallesElement.classList.add('detalles');
         detallesElement.innerHTML = `
@@ -42,6 +54,7 @@ function mostrarProductos(productos) {
         });
         detallesElement.appendChild(botonAgregar);
 
+        // Agregar detalles al contenedor de productos
         productosContainer.appendChild(detallesElement);
     });
 }
@@ -49,8 +62,12 @@ function mostrarProductos(productos) {
 // Función para mostrar el contenido del carrito
 function mostrarCarrito() {
     const carritoContainer = document.getElementById('carrito-container');
+    const listaCarrito = document.getElementById('lista-carrito');
+
+    // Limpiar el contenido del carrito
     carritoContainer.innerHTML = '';
 
+    // Agregar productos al carrito
     carrito.forEach(producto => {
         const carritoElement = document.createElement('div');
         carritoElement.classList.add('producto-en-carrito');
@@ -60,15 +77,16 @@ function mostrarCarrito() {
         carritoContainer.appendChild(carritoElement);
     });
 
-     // SweetAlert
-     Swal.fire({
+    // Mostrar la lista de carrito
+    listaCarrito.style.display = 'block';
+
+    // SweetAlert
+    Swal.fire({
         icon: 'success',
         title: 'Producto Agregado',
         text: 'El producto ha sido agregado al carrito con éxito.'
     });
 }
-
-
 
 // Función para calcular el costo total y mostrar el carrito
 function calcularCostoTotal() {
@@ -83,7 +101,7 @@ function calcularCostoTotal() {
     let costoTotal = 0;
 
     carrito.forEach(producto => {
-         const precioNumerico = parseFloat(producto.precio.replace(/[^0-9.]/g, ''));
+        const precioNumerico = parseFloat(producto.precio.replace(/[^0-9.]/g, ''));
 
         if (!isNaN(precioNumerico)) {
             costoTotal += precioNumerico;
@@ -97,4 +115,3 @@ function calcularCostoTotal() {
 
     costoTotalElement.innerText = `El costo total de los productos en el carrito es: $${costoTotalFormateado}`;
 }
-

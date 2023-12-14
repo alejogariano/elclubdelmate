@@ -184,8 +184,20 @@ body {
     font-size: 15px;
   }
 }
-#productos-container {
+div {
   justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.productos-container {
+  justify-content: center;
+  background-color: palevioletred;
 }
 
 /* Estilo para los productos */
@@ -193,13 +205,14 @@ body {
   color: rgb(94, 38, 6);
   border: 3px solid rgb(94, 38, 6);
   padding: 20px;
-  margin-bottom: 20px;
   background-color: rgb(233, 220, 171);
-  width: 300px;
+  width: 290px;
   text-align: center;
-}
-.detalles .precio {
-  color: #ddd;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 /* Estilo para la imagen del producto */
@@ -216,6 +229,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 button:hover {
@@ -223,11 +237,34 @@ button:hover {
   color: white;
 }
 
+/* Estilo para el contenedor de la lista de carrito */
+.listaCarrito {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgb(233, 220, 171);
+  padding: 10px;
+  display: none;
+  margin: 10px;
+  border: 3px solid rgb(94, 38, 6);
+  z-index: 4;
+}
+
+/* Estilo para el botón que mostrará/ocultará la lista de carrito */
+#mostrar-carrito {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 2; /* Asegura que esté sobre otros elementos */
+}
+
 /* Estilo para el carrito */
-#carrito-container {
-  border: 1px solid #ddd;
+.carrito-container {
+  border: 3px solid rgb(94, 38, 6);
   padding: 20px;
   background-color: black;
+  color: white;
+  position: static;
 }
 
 /* Estilos del botón "Calcular Costo Total" */
@@ -246,6 +283,12 @@ button:hover {
   color: rgb(94, 38, 6);
 }
 
+@media (max-width: 992px) and (min-width: 460px) {
+  .detalles {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
 .parrafoSocio h2 {
   font-size: 40px;
   color: rgb(238, 233, 233);

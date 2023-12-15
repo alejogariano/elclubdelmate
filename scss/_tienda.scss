@@ -14,7 +14,7 @@ div {
     background-color: palevioletred;
 }
 
-/* Estilo para los productos */
+/* productos */
 .detalles {
     color: $keyColor;
     border: 3px solid $keyColor;
@@ -27,16 +27,53 @@ div {
     margin-bottom: 30px;
     margin-left: 40px;
     margin-right: 40px;
+     
+}
+
+.precio {
+    color: $keyColor;
+    font-size: 35px;
+}
+
+.descripcion {
+    color: black;
+    font-size: 13px;
+}
+
+.material {
+    color: black;
+    font-size: 15px;
+}
+
+.capacidad {
+    color: black;
+    font-size: 18px;
+}
+
+.extraDetalles {
+    color: black;
+    font-size: 10px;
+}
+
+.caracteristicas {
+    color: black;
+    font-size: 10px;
 }
 
 
-/* Estilo para la imagen del producto */
+
 .producto-imagen {
     width: 250px;
     margin-bottom: 10px;
+    border: 3px solid $keyColor;
 }
 
-/* Estilo para el botón "Agregar al carrito" */
+.producto-precio {
+    font-size: 25px;
+    color: cornsilk;
+}
+
+/* Agregar al carrito */
 button {
     background-color:$btnMio;
     color: white;
@@ -53,7 +90,7 @@ button:hover {
     
 }
 
-/* Estilo para el contenedor de la lista de carrito */
+/* lista de carrito */
 .listaCarrito {
     position: fixed;
     top: 0;
@@ -66,15 +103,15 @@ button:hover {
     z-index: 4;
 }
 
-/* Estilo para el botón que mostrará/ocultará la lista de carrito */
+/*  boton*/
 #mostrar-carrito {
     position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 2; /* Asegura que esté sobre otros elementos */
+    z-index: 2; 
 }
 
-/* Estilo para el carrito */
+
 .carrito-container {
     border: 3px solid $keyColor;
     padding: 20px;
@@ -85,7 +122,6 @@ button:hover {
 }
 
 
-/* Estilos del botón "Calcular Costo Total" */
 #calcular-costo-total {
     margin-top: 20px;
     background-color: $keyColor;

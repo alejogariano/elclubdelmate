@@ -1,18 +1,55 @@
-//Eventos, uso de HTML en la pagina Cuenta.html
+function validarFormulario() {
+  
+  let emailInput = document.getElementById('inputEmail');
+  let nombreInput = document.getElementById('inputNombre');
+  let terminosCheckbox = document.getElementById('gridCheck');
 
-let asociarse = document.getElementById("asociacion");
+  
+  if (!emailInput.value.trim() || !nombreInput.value.trim()) {
+      
+      Swal.fire({
+          title: 'Error',
+          text: 'Por favor, completa todos los campos obligatorios.',
+          icon: 'error',
+          confirmButtonText: 'Ok'
+      });
+      return;
+  }
 
-asociarse.addEventListener("submit", validarAsociacion);
+  
+  if (!terminosCheckbox.checked) {
+      
+      Swal.fire({
+          title: 'Error',
+          text: 'Debes aceptar los términos y condiciones.',
+          icon: 'error',
+          confirmButtonText: 'Ok'
+      });
+      return;
+  }
 
-function validarAsociacion(e) {
-  e.preventDefault();
-  console.log("Asociacion exitosa");
+  
+  Swal.fire({
+      title: '¡Asociado!',
+      text: 'Te has asociado exitosamente.',
+      icon: 'success',
+      confirmButtonText: 'Ok'
+  }).then((result) => {
+      
+      if (result.isConfirmed) {
+          window.location.href = '../index.html';
+      }
+  });
 }
 
-
-let botonAsociarse = document.getElementById('botonAsociarse');
-
-botonAsociarse.addEventListener('click', function () {
+document.addEventListener('DOMContentLoaded', function() {
   
-  alert('¡Bienvenido al Club!');
+  let formulario = document.getElementById('asociacion');
+  formulario.addEventListener('submit', function(event) {
+      
+      event.preventDefault();
+      
+      validarFormulario();
+  });
 });
+

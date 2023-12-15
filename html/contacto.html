@@ -10,8 +10,10 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!--css-->
     <link rel="stylesheet" href="../css/main.css">
+    <!--sweetalert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--javascript-->
-  <script src="../main.js" defer ></script>
+    <script src="../javascript/contacto.js" defer></script>
     <!--icono web-->
     <link rel="shortcut icon" href="../img/LOGO.webp" type="image/x-icon">
     <!--metas para seo-->
@@ -72,131 +74,107 @@
             <div class="container-fluid">
                 <h2 class="text-center">CONSULTAS</h2>
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaDisabled"
-                        disabled></textarea>
-                    <label for="floatingTextareaDisabled">Nombre y Apellido</label>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="nombreApellido"></textarea>
+                    <label for="nombreApellido">Nombre y Apellido</label>
                 </div>
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInputDisabled" placeholder="name@example.com"
-                        disabled>
-                    <label for="floatingInputDisabled">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <label for="email">Email</label>
                 </div>
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaDisabled"
-                        disabled></textarea>
-                    <label for="floatingTextareaDisabled">Telefono</label>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="telefono"></textarea>
+                    <label for="telefono">Telefono</label>
                 </div>
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled"
-                        style="height: 80px" disabled></textarea>
-                    <label for="floatingTextarea2Disabled">Consulta</label>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="consulta"
+                        style="height: 80px"></textarea>
+                    <label for="consulta">Consulta</label>
                 </div>
                 <div class="form-floating">
-                    <select class="form-select" id="floatingSelectDisabled"
-                        aria-label="Floating label disabled select example" disabled>
+                    <select class="form-select" id="provincia" aria-label="Floating label select example">
                         <option selected></option>
                         <option value="1">Buenos Aires</option>
                         <option value="2">Ciudad Autónoma de Buenos Aires</option>
-                        <option value="3">Catamarca</option>
-                        <option value="4">Chaco</option>
-                        <option value="5">Chubut</option>
-                        <option value="6">Córdoba</option>
-                        <option value="7">Corrientes</option>
-                        <option value="8">Entre Ríos</option>
-                        <option value="9">Formosa</option>
-                        <option value="10">Jujuy</option>
-                        <option value="11">La Pampa</option>
-                        <option value="12">La Rioja</option>
-                        <option value="13">Mendoza</option>
-                        <option value="14">Santa Fe</option>
-                        <option value="15">Neuquén</option>
-                        <option value="16">Río Negro</option>
-                        <option value="17">Salta</option>
-                        <option value="18">San Juan</option>
-                        <option value="19">San Luis</option>
-                        <option value="20">Santa Cruz</option>
-                        <option value="21">Santiago del Estero</option>
-                        <option value="22">Tierra del Fuego, Antártida e Islas del Atlántico Sur</option>
-                        <option value="23">Tucumán</option>
                     </select>
-                    <label for="floatingSelectDisabled">Provincia</label>
+                    <label for="provincia">Provincia</label>
                 </div>
                 <div class="form-floating">
-                    <select class="form-select" id="floatingSelectDisabled"
-                        aria-label="Floating label disabled select example" disabled>
+                    <select class="form-select" id="localidad" aria-label="Floating label select example">
                         <option selected></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="1">Hurlingham</option>
+                        <option value="2">Moron</option>
+                        <option value="3">San Miguel</option>
                     </select>
-                    <label for="floatingSelectDisabled">Localidad</label>
+                    <label for="localidad">Localidad</label>
                 </div>
                 <div>
-                    <button type="button" class="btn btnMio btn-sm">Enviar</button>
-                    <button type="button" class="btn btn-secondary btn-sm">Restablecer</button>
+                    <button type="button" class="btn btnMio btn-sm" onclick="enviarConsulta()">Enviar</button>
+                    <button type="button" class="btn btn-secondary btn-sm"
+                        onclick="restablecerFormulario()">Restablecer</button>
                 </div>
             </div>
+        </div>
 
-            <!--redes-->
+        <!--redes-->
 
-            <div class="container-fluid contenedorRedes">
-                <h2 class="text-center">AQUÍ PUEDES ENCONTRAR NUESTRAS REDES SOCIALES</h2>
+        <div class="container-fluid contenedorRedes">
+            <h2 class="text-center">AQUÍ PUEDES ENCONTRAR NUESTRAS REDES SOCIALES</h2>
 
-                <nav class="container-fluid row redesSociales">
+            <nav class="container-fluid row redesSociales">
 
-                    <div class="card col-xl-4 col-md-2 col-sm-1 redesCard redAnimacion">
-                        <img src="../img/instagram.webp" class="card-img-top" alt="Logo de instagram">
-                        <div class="card-body">
-                            <a href="https://instagram.com/" target="_blank"
-                                class="btn btnMio text-center insta">INSTAGRAM</a>
-                        </div>
+                <div class="card col-xl-4 col-md-2 col-sm-1 redesCard redAnimacion">
+                    <img src="../img/instagram.webp" class="card-img-top" alt="Logo de instagram">
+                    <div class="card-body">
+                        <a href="https://instagram.com/" target="_blank"
+                            class="btn btnMio text-center insta">INSTAGRAM</a>
                     </div>
-
-
-                    <div class="card col-xl-4 col-md-2 col-sm-1 redesCard redAnimacion">
-                        <img src="../img/face.webp" class="card-img-top" alt="Logo de facebook">
-                        <div class="card-body">
-                            <a href="https://Facebook.com/" target="_blank" class="btn btnMio text-center">FACEBOOK</a>
-                        </div>
-                    </div>
-
-                    <div class="card col-xl-4 col-md-2 col-sm-1 redesCard redAnimacion">
-                        <img src="../img/twitter.webp" class="card-img-top twiter" alt="Logo de twitter">
-                        <div class="card-body">
-                            <a href="https://twitter.com/" target="_blank" class="btn btnMio text-center">TWITTER</a>
-                        </div>
-                    </div>
-
-                    <div class="card col-xl-4 col-md-2 col-sm-1 redesCard redAnimacion">
-                        <img src="../img/Youtube.webp" class="card-img-top youtu" alt="Logo de youtube">
-                        <div class="card-body">
-                            <a href="https://youtube.com/" target="_blank" class="btn btnMio text-center">YOUTUBE</a>
-                        </div>
-                    </div>
-
-                    <div class="card col-xl-4 col-md-2 col-sm-1 redesCard redAnimacion">
-                        <img src="../img/tiktok.webp" class="card-img-top" alt="Logo de tiktok">
-                        <div class="card-body">
-                            <a href="https://tiktok.com/" target="_blank" class="btn btnMio text-center">TIK TOK</a>
-                        </div>
-                    </div>
-                </nav>
-
-            </div>
-
-            <!--mapa-->
-
-            <div class="container-fluid mapaVisita">
-                <h2 class="text-center">VISITANOS</h2>
-                <h3 class="text-center">Av. Independencia 2225, Ciudad Autonoma de Buenos Aires</h3>
-
-                <div class="ratio ratio-16x9">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4779.584159252265!2d-58.40135760915741!3d-34.61772388817434!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccae13d6474b9%3A0xaf2148fa4a7fe829!2sEl%20club%20del%20mate!5e0!3m2!1ses!2sus!4v1690504729266!5m2!1ses!2sus"
-                        width="600" height="450" ; allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+
+
+                <div class="card col-xl-4 col-md-2 col-sm-1 redesCard redAnimacion">
+                    <img src="../img/face.webp" class="card-img-top" alt="Logo de facebook">
+                    <div class="card-body">
+                        <a href="https://Facebook.com/" target="_blank" class="btn btnMio text-center">FACEBOOK</a>
+                    </div>
+                </div>
+
+                <div class="card col-xl-4 col-md-2 col-sm-1 redesCard redAnimacion">
+                    <img src="../img/twitter.webp" class="card-img-top twiter" alt="Logo de twitter">
+                    <div class="card-body">
+                        <a href="https://twitter.com/" target="_blank" class="btn btnMio text-center">TWITTER</a>
+                    </div>
+                </div>
+
+                <div class="card col-xl-4 col-md-2 col-sm-1 redesCard redAnimacion">
+                    <img src="../img/Youtube.webp" class="card-img-top youtu" alt="Logo de youtube">
+                    <div class="card-body">
+                        <a href="https://youtube.com/" target="_blank" class="btn btnMio text-center">YOUTUBE</a>
+                    </div>
+                </div>
+
+                <div class="card col-xl-4 col-md-2 col-sm-1 redesCard redAnimacion">
+                    <img src="../img/tiktok.webp" class="card-img-top" alt="Logo de tiktok">
+                    <div class="card-body">
+                        <a href="https://tiktok.com/" target="_blank" class="btn btnMio text-center">TIK TOK</a>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+        <!--mapa-->
+
+        <div class="container-fluid mapaVisita">
+            <h2 class="text-center">VISITANOS</h2>
+            <h3 class="text-center">Av. Independencia 2225, Ciudad Autonoma de Buenos Aires</h3>
+
+            <div class="ratio ratio-16x9">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4779.584159252265!2d-58.40135760915741!3d-34.61772388817434!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccae13d6474b9%3A0xaf2148fa4a7fe829!2sEl%20club%20del%20mate!5e0!3m2!1ses!2sus!4v1690504729266!5m2!1ses!2sus"
+                    width="600" height="450" ; allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+        </div>
         </div>
     </main>
 

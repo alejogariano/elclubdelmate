@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Función para mostrar productos en el DOM
+// funcion para mostrar productos en el DOM
 function mostrarProductos(productos) {
     const productosContainer = document.getElementById('productos-container');
 
@@ -29,7 +29,7 @@ function mostrarProductos(productos) {
     });
 }
 
-// Función para crear un elemento de detalles para un producto
+// funcion para crear un elemento de detalles para un producto
 function crearDetallesElement(producto) {
     const detallesElement = document.createElement('div');
     detallesElement.classList.add('detalles');
@@ -67,7 +67,7 @@ function crearDetallesElement(producto) {
     return detallesElement;
 }
 
-// Función para mostrar el contenido del carrito
+// funcion para mostrar el contenido del carrito
 function mostrarCarrito() {
     const carritoContainer = document.getElementById('carrito-container');
     const listaCarrito = document.getElementById('lista-carrito');
@@ -85,7 +85,7 @@ function mostrarCarrito() {
 
     listaCarrito.style.display = 'block';
 
-    // SweetAlert
+    // sweetalert
     Swal.fire({
         icon: 'success',
         title: 'Producto Agregado',
@@ -93,7 +93,7 @@ function mostrarCarrito() {
     });
 }
 
-// Función para calcular el costo total y mostrar el carrito
+// funcion para calcular el costo total y mostrar el carrito
 function calcularCostoTotal() {
     const mensajeUsuario = document.getElementById("mensaje-usuario");
     const costoTotalElement = document.getElementById("costo-total");
@@ -120,8 +120,4 @@ function calcularCostoTotal() {
     costoTotalElement.innerText = `El costo total de los productos en el carrito es: $${costoTotalFormateado}`;
 }
 
-// Función para alternar la visibilidad de la lista de carrito
-function toggleListaCarrito() {
-    const listaCarrito = document.getElementById('lista-carrito');
-    listaCarrito.style.display = (listaCarrito.style.display === 'none' || listaCarrito.style.display === '') ? 'block' : 'none';
-}
+

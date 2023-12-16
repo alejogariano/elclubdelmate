@@ -37,6 +37,8 @@ CSS: Se utilizó CSS para dar estilo y diseño a las diferentes secciones y elem
 
 Bootstrap: Se utilizó el framework Bootstrap para agilizar el desarrollo.
 
+JavaScript: Se ha implementado funcionalidad dinámica en las páginas Tienda, Contacto y Asociación utilizando JavaScript.
+
 DERECHOS DE AUTOR Y LICENCIAS
 
 El sitio web de venta de mates está protegido por derechos de autor. Todos los derechos están reservados. El uso no autorizado del código fuente, diseño o contenido del sitio web está estrictamente prohibido.
